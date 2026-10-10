@@ -179,7 +179,7 @@ else:
     )
 
 # =========================
-# 数据库下载
+# 数据下载
 # =========================
 st.subheader("数据库下载")
 
@@ -189,14 +189,14 @@ if DB_PATH.exists():
         db_data = f.read()
 
     st.download_button(
-        label="下载 SQLite 数据库",
+        label="下载.db文件",
         data=db_data,
         file_name="records.db",
         mime="application/x-sqlite3",
         use_container_width=True
     )
 
-    st.caption("下载的是完整的 SQLite 数据库文件，可用于备份或迁移。")
+    #st.caption("下载的是完整的 SQLite 数据库文件，可用于备份或迁移。")
 
 else:
     st.warning("数据库文件不存在。")
